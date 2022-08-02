@@ -16,14 +16,5 @@ module BooksApp
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    config.i18n.available_locales = [:en, :ja]
-
-    #config.eager_load_paths << Rails.root.join("extras")
-    
-    I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb, yml}')]
-
-    #config.i18n.default_locale = :en
-    config.i18n.default_locale = :ja
-
   end
 end
