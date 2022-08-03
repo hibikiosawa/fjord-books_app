@@ -1,0 +1,25 @@
+ja: 
+  link:
+    show: 詳細
+    edit: 編集
+    destroy: 削除
+    back: 戻る
+    new_book: 書籍の追加
+  notice:
+    updated: 更新に成功しました
+    destroyed: 削除に成功しました
+    created: 登録に成功しました
+    confirm: 削除してもよろしいですか？
+  activerecord:
+    models:
+      book: 書籍
+    attributes:
+      book:
+        author: 著者  #g
+        memo: メモ  #g
+        picture: 写真  #g
+        title: 題名  #g
+        book: 書籍
+        booktitle: 書籍一覧
+        editingbook: 書籍の編集
+        newbook: 書籍の新規作成
