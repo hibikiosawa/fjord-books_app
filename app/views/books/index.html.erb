@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to t('useredit'),edit_user_registration_path %>
-<%= link_to t('userindex'),users_path %>
+<%= link_to t('views.common.useredit'),edit_user_registration_path %>
+<%= link_to t('views.common.userindex'),users_path %>
 
 <h1><%= Book.model_name.human %></h1>
 
@@ -37,5 +37,5 @@
 
 <%= link_to t('views.common.new'), new_book_path %>
 
-<%= link_to t('logout'),destroy_user_session_path,method: :delete %>
+<%= link_to t('views.common.logout'),destroy_user_session_path,method: :delete %>
 

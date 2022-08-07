@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       book: 本  #g
-      alluser: 全てのユーザー 
+      alluser: 全てのユーザー #g
 
     attributes:
       book:
