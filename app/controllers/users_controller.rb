@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show]
 
+  def index
+    @users = User.order(:id).page(params[:page])
+  end
+
   def show
   end
   
