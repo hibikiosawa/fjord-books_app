@@ -218,13 +218,18 @@ ja:
       logout: ログアウト
       useredit: 登録情報の編集
       userindex: ユーザ一覧
-
     pagination:
       first: '最初'
       last: '最後'
       previous: '前'
       next: '次'
       truncate: '...'
+    devise:
+      cancelmyaccount: アカウントの削除
+      update: 更新
+      updatetext: パスワードを更新するには現在のパスワードが必要です。
+      pswsize: 文字以上
+      noupdate: 更新しない場合は空白
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
