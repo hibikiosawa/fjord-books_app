@@ -23,6 +23,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <%= form_with model: @comment, local: true  do |form| %>
+    <%= form.text_area :content %><br>
+    <%= form.file_field :image %><br>
+    <%= form.submit %>
+  <% end %>
+
   <div class="actions">
     <%= f.submit t('.sign_up') %>
   </div>
