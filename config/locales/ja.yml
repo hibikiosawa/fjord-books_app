@@ -239,6 +239,8 @@ ja:
       forgotpsw: パスワードを忘れた場合
       changepsw: パスワードを変更する
       resetpsw: パスワード再設定メールを送信する
+      newpsw: 新しいパスワード
+      confirmpsw: パスワードの確認
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
