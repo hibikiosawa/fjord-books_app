@@ -3,7 +3,7 @@
 class UsersController < ApplicationController
   def index
     @users = User.order(:id).page(params[:page])
-    @users = User.order(:id).page(params[:page]).with_attached_avatar
+    @users = User.order(:id).page(params[:page]).with_attached_avatar.all
   end
 
   def show
