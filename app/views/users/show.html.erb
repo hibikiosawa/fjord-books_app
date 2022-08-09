@@ -1,2 +1,23 @@
-<h1><%= @user.email %>のユーザーページ</h1>
-<%= @user.postcode %>
+
+
+<p>
+  <h1><%= t('views.common.email') %></h1>
+  <%= @user.email %>
+</p>
+
+<p>
+  <h1><%= t('views.common.postcode') %></h1>
+  <%= @user.postcode %>
+</p>
+
+<p>
+  <h1><%= t('views.common.address') %></h1>
+  <%= @user.address %>
+</p>
+
+<p>
+  <h1><%= t('views.common.profile') %></h1>
+  <%= @user.profile %>
+</p>
+
+<%= link_to t('views.common.back'),books_path %>

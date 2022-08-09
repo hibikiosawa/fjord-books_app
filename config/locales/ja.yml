@@ -218,6 +218,10 @@ ja:
       logout: ログアウト
       useredit: 登録情報の編集
       userindex: ユーザ一覧
+      email: メールアドレス
+      postcode: 郵便番号
+      address: 住所
+      profile: 自己紹介
     pagination:
       first: '最初'
       last: '最後'
@@ -230,6 +234,11 @@ ja:
       updatetext: パスワードを更新するには現在のパスワードが必要です。
       pswsize: 文字以上
       noupdate: 更新しない場合は空白
+      login: ログイン
+      signup: 新規登録
+      forgotpsw: パスワードを忘れた場合
+      changepsw: パスワードを変更する
+      resetpsw: パスワード再設定メールを送信する
   controllers:
     common:
       notice_create: "%{name}が作成されました。"

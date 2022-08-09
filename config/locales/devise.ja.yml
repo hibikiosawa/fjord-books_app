@@ -29,6 +29,7 @@ ja:
         postcode: 郵便番号
         address: 住所
         profile: 自己紹介
+        username: ユーザーネーム
     models:
       user: ユーザー
   devise:
