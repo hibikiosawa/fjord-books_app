@@ -216,12 +216,8 @@ ja:
       title_new: "%{name}の新規作成"
       title_edit: "%{name}の編集"
       logout: ログアウト
-      useredit: 登録情報の編集
-      userindex: ユーザ一覧
-      email: メールアドレス
-      postcode: 郵便番号
-      address: 住所
-      profile: 自己紹介
+      login: ログイン
+      sign_up: 新規登録
     pagination:
       first: '最初'
       last: '最後'
@@ -229,18 +225,24 @@ ja:
       next: '次'
       truncate: '...'
     devise:
-      cancelmyaccount: アカウントの削除
+      cancel_my_account: アカウントの削除
       update: 更新
-      updatetext: パスワードを更新するには現在のパスワードが必要です。
-      pswsize: 文字以上
-      noupdate: 更新しない場合は空白
-      login: ログイン
-      signup: 新規登録
-      forgotpsw: パスワードを忘れた場合
-      changepsw: パスワードを変更する
-      resetpsw: パスワード再設定メールを送信する
-      newpsw: 新しいパスワード
-      confirmpsw: パスワードの確認
+      update_text: パスワードを更新するには現在のパスワードが必要です。
+      password_size: 文字以上
+      no_update: 更新しない場合は空白
+      forgot_password: パスワードを忘れた場合
+      change_password: パスワードを変更する
+      reset_password: パスワード再設定メールを送信する
+      new_password: 新しいパスワード
+      confirm_password: パスワードの確認
+    user:
+      edit: 登録情報の編集
+      index: ユーザ一覧
+      email: メールアドレス
+      post_code: 郵便番号
+      address: 住所
+      profile: 自己紹介
+      user_name: ユーザーネーム
   controllers:
     common:
       notice_create: "%{name}が作成されました。"

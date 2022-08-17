@@ -1,4 +1,4 @@
-<h2><%= t('views.common.useredit') %></h2>
+<h2><%= t('views.user.edit') %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -9,7 +9,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :postcode %><br />
+    <%= f.label :post_code %><br />
     <%= f.text_field :postcode, autofocus: true, autocomplete: "postcode" %>
   </div>
 
@@ -28,11 +28,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i><%= t('views.devise.noupdate') %></i><br />
+    <%= f.label :password %> <i><%= t('views.devise.no_update') %></i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %><%= t('views.devise.pswsize') %></em>
+      <em><%= @minimum_password_length %><%= t('views.devise.password_size') %></em>
     <% end %>
   </div>
 
@@ -42,7 +42,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i><%= t('views.devise.updatetext') %></i><br />
+    <%= f.label :current_password %> <i><%= t('views.devise.update_text') %></i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
@@ -51,8 +51,8 @@
   </div>
 <% end %>
 
-<h3><%= t('views.devise.cancelmyaccount') %></h3>
+<h3><%= t('views.devise.cancel_my_account') %></h3>
 
-<p><%= button_to t('views.devise.cancelmyaccount'), registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p><%= button_to t('views.devise.cancel_my_account'), registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to t('views.common.back'), :back %>

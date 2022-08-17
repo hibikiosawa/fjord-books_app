@@ -25,11 +25,6 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
-        name: 名前
-        postcode: 郵便番号
-        address: 住所
-        profile: 自己紹介
-        username: ユーザーネーム
     models:
       user: ユーザー
   devise:
