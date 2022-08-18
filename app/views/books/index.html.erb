@@ -34,9 +34,14 @@
 
 <%= paginate @books %>
 
-<style type ="text/css">
+<style type="text/css">
+  p.book_path {
+  margin-top 30px;
+  }
+</style>
 
-
-<%= link_to t('views.common.new'), new_book_path %>
+<p class="book_path">
+  <%= link_to t('views.common.new'), new_book_path %>
+</p>
 
 
