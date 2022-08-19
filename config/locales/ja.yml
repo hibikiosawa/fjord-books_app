@@ -238,11 +238,6 @@ ja:
     user:
       edit: 登録情報の編集
       index: ユーザ一覧
-      email: メールアドレス
-      post_code: 郵便番号
-      address: 住所
-      profile: 自己紹介
-      user_name: ユーザーネーム
   controllers:
     common:
       notice_create: "%{name}が作成されました。"

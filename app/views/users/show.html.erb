@@ -1,21 +1,21 @@
 
 <p>
-  <li><%= t('views.user.email') %></li>
+  <li><%= User.human_attribute_name(:email) %></li>
   <%= @user.email %>
 </p>
 
 <p>
-  <li><%= t('views.user.post_code') %></li>
+  <li><%= User.human_attribute_name(:post_code) %></li>
   <%= @user.postcode %>
 </p>
 
 <p>
-  <li><%= t('views.user.address') %></li>
+  <li><%= User.human_attribute_name(:address) %></li>
   <%= @user.address %>
 </p>
 
 <p>
-  <li><%= t('views.user.profile') %></li>
+  <li><%= User.human_attribute_name(:profile) %></li>
   <%= @user.profile %>
 </p>
 
