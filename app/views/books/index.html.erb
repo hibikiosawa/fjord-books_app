@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to t('views.user.edit'), edit_user_registration_path %>
+<%= link_to t('views.user.index'), users_path %>
+<%= link_to t('views.common.logout'), destroy_user_session_path,method: :delete %>
+
 <h1><%= Book.model_name.human %></h1>
 
 <table>
@@ -30,6 +34,14 @@
 
 <%= paginate @books %>
 
-<br>
+<style type="text/css">
+  p.book_path {
+  margin-top 30px;
+  }
+</style>
 
-<%= link_to t('views.common.new'), new_book_path %>
+<p class="book_path">
+  <%= link_to t('views.common.new'), new_book_path %>
+</p>
+
+

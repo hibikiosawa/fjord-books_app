@@ -1,0 +1,22 @@
+
+<p>
+  <li><%= User.human_attribute_name(:email) %></li>
+  <%= @user.email %>
+</p>
+
+<p>
+  <li><%= User.human_attribute_name(:post_code) %></li>
+  <%= @user.postcode %>
+</p>
+
+<p>
+  <li><%= User.human_attribute_name(:address) %></li>
+  <%= @user.address %>
+</p>
+
+<p>
+  <li><%= User.human_attribute_name(:profile) %></li>
+  <%= @user.profile %>
+</p>
+
+<%= link_to t('views.common.back'), books_path %>
