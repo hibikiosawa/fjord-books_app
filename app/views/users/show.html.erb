@@ -1,9 +1,11 @@
 <h1><%= t('views.common.title_show', name: User.model_name.human) %></h1>
 
 <% if current_user.following?(@user) %>
-  <%= link_to "フォロー外す", user_followfollwer_path(@user.id), method: :delete %>
+
+  <%= link_to "フォロー外す", user_followfollowers_path(@user.id), method: :delete %>
 <% else %>
-  <%= link_to "フォローする", user_followfollower_path(@user.id), method: :post %>
+  <%= link_to "フォローする", user_followfollowers_path(@user.id), method: :post %>
+
 <% end %>
 
 <p>
