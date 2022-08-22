@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   resources :books
   resources :users, only: %i(index show)
 
-  # ネストさせる
   resources :users do
     resource :followfollowers, only: [:create, :destroy]
     get 'followings' => 'followfollowers#followings', as: 'followings'
