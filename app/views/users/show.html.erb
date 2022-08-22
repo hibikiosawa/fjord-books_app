@@ -2,19 +2,19 @@
 
 <p>
   <% if current_user.following?(@user) %>
-   <%= link_to "unfollow", user_followfollowers_path(@user.id), method: :delete %>
+   <%= link_to t('views.follow.unfollow'), user_followfollowers_path(@user.id), method: :delete %>
   <% else %>
-   <%= link_to "follow", user_followfollowers_path(@user.id), method: :post %>
+   <%= link_to t('views.follow.follow'), user_followfollowers_path(@user.id), method: :post %>
   <% end %>
 </p>
 
 <p>
-  <%= link_to "followings", user_followings_path(@user) %>
+  <%= link_to t('views.follow.followings'), user_followings_path(@user) %>
   <%= @user.followings.count %>
 </p>
 
 <p>
-  <%= link_to "followers", user_followings_path(@user) %>
+  <%= link_to t('views.follow.followers'), user_followings_path(@user) %>
   <%= @user.followers.count %>
 </p>
  
