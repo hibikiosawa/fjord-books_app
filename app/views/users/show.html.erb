@@ -19,7 +19,6 @@
   <%= link_to t('views.follow.followers'), user_followers_path(@user) %>
   <%= @user.followers.count %>
 </p>
- 
 
 <p>
   <strong><%= User.human_attribute_name(:email) %>:</strong>
@@ -50,7 +49,7 @@
   <strong><%= User.human_attribute_name(:avatar) %>:</strong>
   <% if @user.avatar.attached? %>
     <br>
-    <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150])%>
+    <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150]) %>
   <% end %>
 </p>
 
