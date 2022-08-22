@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class FollowfollowersController < ApplicationController
-
   def create
     current_user.follow(params[:user_id])
     redirect_to request.referer

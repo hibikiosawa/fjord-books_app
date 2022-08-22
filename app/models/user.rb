@@ -6,8 +6,8 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   # フォローをした、されたの関係
-  has_many :followfollowers, class_name: 'Followfollower', foreign_key: 'follower_id', dependent: :destroy
-  has_many :reverse_of_followfollowers, class_name: 'Followfollower', foreign_key: 'followed_id', dependent: :destroy
+  has_many :followfollowers, class_name: 'Followfollower', foreign_key: 'follower_id', dependent: :destroy, inverse_of: :follower
+  has_many :reverse_of_followfollowers, class_name: 'Followfollower', foreign_key: 'followed_id', dependent: :destroy, inverse_of: :followed
 
   # 一覧画面で使う
   has_many :followings, through: :followfollowers, source: :followed
