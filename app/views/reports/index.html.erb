@@ -1,0 +1,13 @@
+<h2>日報一覧</h2>
+<hr>
+<% @reports.each do |report| %>
+    <li>投稿者:
+    <%= report.user_id %></li>
+    <li>タイトル:
+    <%= report.title %></li>
+    <li>本文:
+    <%= report.body %></li>
+    詳細・コメントを見る
+    <hr>
+<% end %>
+<%= paginate @reports %>
