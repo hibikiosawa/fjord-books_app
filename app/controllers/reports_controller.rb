@@ -4,10 +4,6 @@ class ReportsController < ApplicationController
     @report = Report.new
   end
 
-  def show
-    @reports = Report.find(params[:id])
-  end
-
   def index
     @reports = Report.order(:id).page(params[:page])
   end
@@ -19,7 +15,11 @@ class ReportsController < ApplicationController
     redirect_to reports_path
   end
 
+  def show
+    @report = Report.find(params[:id])
+  end
+
   def report_params
-    params.permit(:title, :body, :user_id)
+    params.require(:report).permit(:title, :body, :user_id)
   end
 end
