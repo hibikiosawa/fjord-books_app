@@ -1,11 +1,14 @@
 <%= form_with model: @report, local: true do |form| %>
-    <h2><%= t('views.report.create') %></h2>
-    <p><%= form.label :title %><br>
+<h2><%= t('views.report.create') %></h2>
+<p>
+    <%= form.label :title %><br>
     <%= form.text_field :title %>
-    </p>
-    <p><%= form.label :body %><br>
+</p>
+<p>
+    <%= form.label :body %><br>
     <%= form.text_area :body %>
-    </p>
-    <p><%= form.submit %>
-    </p>
-    <% end %>
+</p>
+<p>
+    <%= form.submit %>
+</p>
+<% end %>

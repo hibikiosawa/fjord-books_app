@@ -1,13 +1,19 @@
 <h2><%= t('views.report.index') %></h2>
 <hr>
 <% @reports.each do |report| %>
-    <li><%= Report.human_attribute_name(:user) %>
-    <%= report.user_id %></li>
-    <li><%= Report.human_attribute_name(:title) %>
-    <%= report.title %></li>
-    <li><%= Report.human_attribute_name(:body) %>
-    <%= report.body %></li>
-    <%= link_to t('views.report.create'), report_path(report) %>
+    <li>
+         <%= Report.human_attribute_name(:user) %>
+         <%= report.user_id %>
+    </li>
+    <li>
+         <%= Report.human_attribute_name(:title) %>
+         <%= report.title %>
+    </li>
+    <li>
+         <%= Report.human_attribute_name(:body) %>
+         <%= report.body %>
+    </li>
+    <%= link_to t('views.report.show_index'), report_path(report) %>
     <hr>
 <% end %>
 <%= paginate @reports %>

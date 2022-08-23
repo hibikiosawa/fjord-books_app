@@ -1,12 +1,11 @@
-
+<h2><%= t('views.report.show') %></h2>
 <p>
-  <%= Report.human_attribute_name(:user) %>
-  <%= @report.user_id %>
+    <%= Report.human_attribute_name(:user) %>
+    <%= @report.user_id %>
 </p>
 <p>
-    <li><%= Report.human_attribute_name(:title) %>
-    <%= @report.title %>
+    <%= Report.human_attribute_name(:title) %>
 </p>
 <p>
-    <li><%= Report.human_attribute_name(:body) %>
+    <%= Report.human_attribute_name(:body) %>
 </p>
