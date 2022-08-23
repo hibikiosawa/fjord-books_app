@@ -1,13 +1,13 @@
 <h2>日報一覧</h2>
 <hr>
 <% @reports.each do |report| %>
-    <li>投稿者:
+    <li><%= Report.human_attribute_name(:user) %>
     <%= report.user_id %></li>
-    <li>タイトル:
+    <li><%= Report.human_attribute_name(:title) %>
     <%= report.title %></li>
-    <li>本文:
+    <li><%= Report.human_attribute_name(:body) %>
     <%= report.body %></li>
-    詳細・コメントを見る
+    <%= link_to t('views.common.report_show'), edit_report_path(report) %>
     <hr>
 <% end %>
 <%= paginate @reports %>
