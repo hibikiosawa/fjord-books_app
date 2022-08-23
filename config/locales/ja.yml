@@ -218,13 +218,16 @@ ja:
       title_show: "%{name}の詳細"
       sign_out: ログアウト
       minimum_length: "%{length}文字以上"
-      report_show: 詳細・コメントを見る
     pagination:
       first: '最初'
       last: '最後'
       previous: '前'
       next: '次'
       truncate: '...'
+    report:
+      show: 詳細・コメントを見る
+      create: 日報作成
+      index: 日報一覧
   layouts:
     application:
       menu: メニュー

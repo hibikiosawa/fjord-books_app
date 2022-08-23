@@ -1,4 +1,4 @@
-<h2>日報一覧</h2>
+<h2><%= t('views.report.index') %></h2>
 <hr>
 <% @reports.each do |report| %>
     <li><%= Report.human_attribute_name(:user) %>
@@ -7,7 +7,7 @@
     <%= report.title %></li>
     <li><%= Report.human_attribute_name(:body) %>
     <%= report.body %></li>
-    <%= link_to t('views.common.report_show'), edit_report_path(report) %>
+    <%= link_to t('views.report.create'), report_path(report) %>
     <hr>
 <% end %>
 <%= paginate @reports %>

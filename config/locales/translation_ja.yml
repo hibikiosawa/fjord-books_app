@@ -3,6 +3,7 @@ ja:
     models:
       book: 本  #g
       user: ユーザ
+      report: 日報
 
     attributes:
       book:
@@ -20,3 +21,4 @@ ja:
         user: ユーザ
         title: タイトル
         body: 本文
+        create: 日報作成
