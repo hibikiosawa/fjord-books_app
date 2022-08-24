@@ -1,15 +1,19 @@
 <h2><%= t('views.report.show') %></h2>
 <p>
-    <%= Report.human_attribute_name(:user) %>
-    <%= @report.user_id %>
+  <%= Report.human_attribute_name(:user) %>
+  <% if User.find(@report.user_id).name == "" %>
+    <%= User.find(@report.user_id).email %>
+  <% else %>
+    <%= User.find(@report.user_id).name %>
+  <% end %>
 </p>
 <p>
-    <%= Report.human_attribute_name(:title) %>
-    <%= @report.title %>
+  <%= Report.human_attribute_name(:title) %>
+  <%= @report.title %>
 </p>
 <p>
-    <%= Report.human_attribute_name(:body) %>
-    <%= @report.body %>
+  <%= Report.human_attribute_name(:body) %>
+  <%= @report.body %>
 </p>
 
 <%= render 'comments/comments', commentable: @report %> 
