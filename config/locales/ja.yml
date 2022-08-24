@@ -229,6 +229,7 @@ ja:
       create: 日報作成
       index: 日報一覧
       show: 日報詳細
+      edit: 編集
 
   layouts:
     application:
