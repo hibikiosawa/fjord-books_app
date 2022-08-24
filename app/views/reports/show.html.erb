@@ -11,3 +11,7 @@
     <%= Report.human_attribute_name(:body) %>
     <%= @report.body %>
 </p>
+
+<%= render 'comments/comments', commentable: @report %> 
+
+<%= render 'comments/form', commentable: @report, comment: @comments %> 

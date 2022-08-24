@@ -230,6 +230,8 @@ ja:
       index: 日報一覧
       show: 日報詳細
       edit: 編集
+      comment: コメント
+      new_comment: コメントを書く
 
   layouts:
     application:

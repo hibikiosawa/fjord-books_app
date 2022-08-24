@@ -1,0 +1,13 @@
+<h2><%= t('views.report.comment') %></h2>
+<hr>
+<% commentable.comments.each do |comment| %>
+<p>
+  <%= Report.human_attribute_name(:user) %>
+  <%= comment.user_id %>
+</p>
+<p>
+  <%= Report.human_attribute_name(:body) %>
+  <%= comment.content %>
+</p>
+<hr>
+<% end %>
