@@ -15,6 +15,9 @@
   <%= Report.human_attribute_name(:body) %>
   <%= @report.body %>
 </p>
+<p>
+  <%= @report.created_at %>
+</p>
 
 <%= render 'comments/comments', commentable: @report %> 
 

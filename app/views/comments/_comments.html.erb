@@ -1,17 +1,19 @@
 <h2><%= t('views.report.comment') %></h2>
 <hr>
 <% commentable.comments.each do |comment| %>
-<p>
-  <%= Report.human_attribute_name(:user) %>
-  <% if User.find(@report.user_id).name == "" %>
-    <%= User.find(@report.user_id).email %>
-  <% else %>
-    <%= User.find(@report.user_id).name %>
-  <% end %>
-</p>
-<p>
-  <%= Report.human_attribute_name(:body) %>
-  <%= comment.content %>
-</p>
-<hr>
+  <p>
+    <%= Report.human_attribute_name(:user) %>
+    <% if User.find(comment.user_id).name == "" %>
+      <%= User.find(comment.user_id).email %>
+    <% else %>
+      <%= User.find(comment.user_id).name %>
+    <% end %>
+  </p>
+  <p>
+    <%= Report.human_attribute_name(:body) %>
+    <%= comment.content %>
+  </p>
+  <p>
+    <%= comment.created_at %>
+  <hr>
 <% end %>

@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   resources :reports
   
   resources :books do  
-    resources :comments, only: [:create], module: :books  
+    resources :comments, only: %i[create destroy], module: :books  
   end  
 
   resources :reports do  
-    resources :comments, only: %i[create], module: :reports 
+    resources :comments, only: %i[create destroy], module: :reports 
   end  
 
   resources :users, only: %i[index show] do

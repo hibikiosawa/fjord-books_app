@@ -1,22 +1,25 @@
 <h2><%= t('views.report.index') %></h2>
 <hr>
 <% @reports.each do |report| %>
-  <li>
+  <p>
     <%= Report.human_attribute_name(:user) %>
     <% if User.find(report.user_id).name == "" %>
       <%= User.find(report.user_id).email %>
     <% else %>
       <%= User.find(report.user_id).name %>
     <% end %>
-  </li>
-  <li>
+  <p>
+  <p>
     <%= Report.human_attribute_name(:title) %>
     <%= report.title %>
-  </li>
-  <li>
+  </p>
+  <p>
     <%= Report.human_attribute_name(:body) %>
     <%= report.body %>
-  </li>
+  </p>
+  <p>
+    <%= report.created_at %>
+  </p>
   <%= link_to t('views.report.show_index'), report_path(report) %>
   <% if report.user_id == current_user.id %>
     <%= link_to t('views.common.edit'), edit_report_path(report) %>
