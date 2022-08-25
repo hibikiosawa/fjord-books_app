@@ -18,7 +18,8 @@
     <%= report.body %>
   </p>
   <p>
-    <%= report.created_at %>
+    <%= Report.human_attribute_name(:post_time) %>
+    <%= report.created_at.strftime('%Y/%m/%d %H:%M') %>
   </p>
   <%= link_to t('views.report.show_index'), report_path(report) %>
   <% if report.user_id == current_user.id %>
