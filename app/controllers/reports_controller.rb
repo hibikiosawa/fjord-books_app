@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class ReportsController < ApplicationController
   before_action :set_report, only: %i[show edit update destroy]
-  
+
   def new
     @report = Report.new
   end
@@ -19,7 +21,7 @@ class ReportsController < ApplicationController
     end
   end
 
-  def show;  end
+  def show; end
 
   def destroy
     @report.destroy
@@ -31,7 +33,7 @@ class ReportsController < ApplicationController
       redirect_to reports_url
     else
       render :edit
-    end 
+    end
   end
 
   def edit; end
