@@ -1,8 +1,8 @@
 <h2><%= t('views.report.new_comment') %></h2>
 <hr>
-<%= form_with model: [commentable, Comment.new] do |f| %>  
-  <%= f.text_area :content %>  
-  <div class="actions">  
-    <%= f.submit "コメントをする", class: 'btn btn-warning px-5' %>  
-  </div>  
+<%= form_with model: [commentable, Comment.new] do |f| %>
+  <%= f.text_area :content %>
+  <div class="actions">
+    <%= f.submit "コメントをする", class: 'btn btn-warning px-5' %>
+  </div>
 <% end %>
