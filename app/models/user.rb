@@ -5,18 +5,18 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one_attached :avatar
 
-  has_many :followfollowers, class_name: 'Followfollower', foreign_key: 'follower_id', dependent: :destroy, inverse_of: :follower
-  has_many :reverse_of_followfollowers, class_name: 'Followfollower', foreign_key: 'followed_id', dependent: :destroy, inverse_of: :followed
+  has_many :follow_relationships, class_name: 'follow_relationship', foreign_key: 'follower_id', dependent: :destroy, inverse_of: :follower
+  has_many :reverse_of_follow_relationships, class_name: 'follow_relationship', foreign_key: 'followed_id', dependent: :destroy, inverse_of: :followed
 
-  has_many :followings, through: :followfollowers, source: :followed
-  has_many :followers, through: :reverse_of_followfollowers, source: :follower
+  has_many :followings, through: :follow_relationships, source: :followed
+  has_many :followers, through: :reverse_of_follow_relationships, source: :follower
 
   def follow(user_id)
-    followfollowers.create(followed_id: user_id)
+    follow_relationships.create(followed_id: user_id)
   end
 
   def unfollow(user_id)
-    followfollowers.find_by(followed_id: user_id).destroy
+    follow_relationships.find_by(followed_id: user_id).destroy
   end
 
   def following?(user)
