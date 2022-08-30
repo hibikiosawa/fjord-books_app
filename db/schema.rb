@@ -49,12 +49,12 @@ ActiveRecord::Schema.define(version: 2022_08_22_010009) do
     t.string "picture"
   end
 
-  create_table "followfollowers", force: :cascade do |t|
+  create_table "follow_relationships", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "followed_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["follower_id", "followed_id"], name: "index_followfollowers_on_follower_id_and_followed_id", unique: true
+    t.index ["follower_id", "followed_id"], name: "index_follow_relationships_on_follower_id_and_followed_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
