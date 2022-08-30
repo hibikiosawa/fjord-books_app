@@ -36,7 +36,9 @@ class ReportsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    redirect_to report_path unless current_user == @report.user
+  end
 
   private
 
