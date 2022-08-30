@@ -2,10 +2,10 @@
 <hr>
 <p>
   <%= Report.human_attribute_name(:user) %>
-  <% if User.find(@report.user_id).name == "" %>
-    <%= User.find(@report.user_id).email %>
+  <% if @report.user.name == "" %>
+    <%= @report.user.email %>
   <% else %>
-    <%= User.find(@report.user_id).name %>
+    <%= @report.user.name %>
   <% end %>
 </p>
 <p>
