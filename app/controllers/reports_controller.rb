@@ -37,7 +37,7 @@ class ReportsController < ApplicationController
   end
 
   def edit
-    redirect_to report_path unless current_user == @report.user
+    redirect_to report_path if current_user != @report.user
   end
 
   private
