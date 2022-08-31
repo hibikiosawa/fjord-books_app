@@ -3,11 +3,7 @@
 <% @reports.each do |report| %>
   <p>
     <%= Report.human_attribute_name(:user) %>
-    <% if User.find(report.user_id).name == "" %>
-      <%= User.find(report.user_id).email %>
-    <% else %>
-      <%= User.find(report.user_id).name %>
-    <% end %>
+    <%= report.user.name_or_email %>
   <p>
   <p>
     <%= Report.human_attribute_name(:title) %>

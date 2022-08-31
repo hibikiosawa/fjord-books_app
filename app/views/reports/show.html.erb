@@ -2,11 +2,7 @@
 <hr>
 <p>
   <%= Report.human_attribute_name(:user) %>
-  <% if @report.user.name == "" %>
-    <%= @report.user.email %>
-  <% else %>
-    <%= @report.user.name %>
-  <% end %>
+  <%= @report.user.name_or_email %>
 </p>
 <p>
   <%= Report.human_attribute_name(:title) %>

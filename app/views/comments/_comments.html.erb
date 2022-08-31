@@ -3,11 +3,7 @@
 <% commentable.comments.each do |comment| %>
   <p>
     <%= Report.human_attribute_name(:user) %>
-    <% if comment.user.name == "" %>
-      <%= comment.user.email %>
-    <% else %>
-      <%= comment.user.name %>
-    <% end %>
+    <%= comment.user.name_or_email %>
   </p>
   <p>
     <%= Report.human_attribute_name(:body) %>
