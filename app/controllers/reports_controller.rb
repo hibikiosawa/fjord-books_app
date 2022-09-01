@@ -12,6 +12,7 @@ class ReportsController < ApplicationController
   end
 
   def create
+    redirect_to report_path if current_user != @report.user
     @report = Report.new(report_params)
     @report.user_id = current_user.id
     if @report.save
@@ -29,6 +30,7 @@ class ReportsController < ApplicationController
   end
 
   def update
+    redirect_to report_path if current_user != @report.user
     if @report.update(report_params)
       redirect_to reports_url
     else
