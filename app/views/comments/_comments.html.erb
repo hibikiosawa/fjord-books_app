@@ -1,0 +1,16 @@
+<h2><%= t('views.report.comment') %></h2>
+<hr>
+<% commentable.comments.each do |comment| %>
+  <p>
+    <%= Report.human_attribute_name(:user) %>
+    <%= comment.user.name_or_email %>
+  </p>
+  <p>
+    <%= Report.human_attribute_name(:body) %>
+    <%= comment.content %>
+  </p>
+  <p>
+    <%= Report.human_attribute_name(:post_time) %>
+    <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
+  </p>
+<% end %>
